@@ -33,14 +33,16 @@
                     android:id="@+id/fragmentWaybillInfo_contractorLabelTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/waybillInfoFragment_contractor" />
+                    android:text="@string/waybillInfoFragment_contractor"
+                    android:textAppearance="@android:style/TextAppearance.Material.Body2" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/fragmentWaybillInfo_contractorTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:gravity="end" />
+                    android:gravity="end"
+                    android:textAppearance="@android:style/TextAppearance.Material.Body1" />
 
             </LinearLayout>
 
@@ -54,14 +56,16 @@
                     android:id="@+id/fragmentWaybillInfo_addressLabelTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/waybillInfoFragment_address" />
+                    android:text="@string/waybillInfoFragment_address"
+                    android:textAppearance="@android:style/TextAppearance.Material.Body2" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/fragmentWaybillInfo_addressTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:gravity="end" />
+                    android:gravity="end"
+                    android:textAppearance="@android:style/TextAppearance.Material.Body1" />
 
             </LinearLayout>
 
@@ -75,14 +79,16 @@
                     android:id="@+id/fragmentWaybillInfo_documentLabelTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/waybillInfoFragment_document" />
+                    android:text="@string/waybillInfoFragment_document"
+                    android:textAppearance="@android:style/TextAppearance.Material.Body2" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/fragmentWaybillInfo_documentTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:gravity="end" />
+                    android:gravity="end"
+                    android:textAppearance="@android:style/TextAppearance.Material.Body1" />
 
             </LinearLayout>
 
@@ -96,14 +102,16 @@
                     android:id="@+id/fragmentWaybillInfo_amountLabelTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/waybillInfoFragment_amount" />
+                    android:text="@string/waybillInfoFragment_amount"
+                    android:textAppearance="@android:style/TextAppearance.Material.Body2" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/fragmentWaybillInfo_amountTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:gravity="end" />
+                    android:gravity="end"
+                    android:textAppearance="@android:style/TextAppearance.Material.Body1" />
 
             </LinearLayout>
 
@@ -117,14 +125,16 @@
                     android:id="@+id/fragmentWaybillInfo_capacityLabelTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/waybillInfoFragment_capacity" />
+                    android:text="@string/waybillInfoFragment_capacity"
+                    android:textAppearance="@android:style/TextAppearance.Material.Body2" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/fragmentWaybillInfo_capacityTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:gravity="end" />
+                    android:gravity="end"
+                    android:textAppearance="@android:style/TextAppearance.Material.Body1" />
 
             </LinearLayout>
 
@@ -138,14 +148,16 @@
                     android:id="@+id/fragmentWaybillInfo_wrapperColorLabelTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/waybillInfoFragment_wrapper_color" />
+                    android:text="@string/waybillInfoFragment_wrapper_color"
+                    android:textAppearance="@android:style/TextAppearance.Material.Body2" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/fragmentWaybillInfo_wrapperColorTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:gravity="end" />
+                    android:gravity="end"
+                    android:textAppearance="@android:style/TextAppearance.Material.Body1" />
 
             </LinearLayout>
 
@@ -154,6 +166,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
+                android:textAppearance="@android:style/TextAppearance.Material.Body2"
                 android:text="@string/waybillInfoFragment_notes" />
 
             <LinearLayout
@@ -180,6 +193,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
+                android:textAppearance="@android:style/TextAppearance.Material.Body2"
                 android:text="@string/waybillInfoFragment_return" />
 
             <LinearLayout
@@ -201,6 +215,7 @@
                         android:id="@+id/fragmentWaybillInfo_returnAmountLabelTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textAppearance="@android:style/TextAppearance.Material.Body2"
                         android:text="@string/waybillInfoFragment_amount" />
 
                     <com.google.android.material.textview.MaterialTextView
@@ -208,6 +223,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
+                        android:textAppearance="@android:style/TextAppearance.Material.Body1"
                         android:gravity="end" />
 
                 </LinearLayout>
@@ -225,6 +241,7 @@
                         android:id="@+id/fragmentWaybillInfo_returnProductLabelTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textAppearance="@android:style/TextAppearance.Material.Body2"
                         android:text="@string/waybillInfoFragment_product" />
 
                     <com.google.android.material.textview.MaterialTextView
@@ -232,6 +249,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
+                        android:textAppearance="@android:style/TextAppearance.Material.Body1"
                         android:gravity="end" />
 
                 </LinearLayout>
@@ -249,6 +267,7 @@
                         android:id="@+id/fragmentWaybillInfo_returnDocumentLabelTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textAppearance="@android:style/TextAppearance.Material.Body2"
                         android:text="@string/waybillInfoFragment_document" />
 
                     <com.google.android.material.textview.MaterialTextView
@@ -256,6 +275,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
+                        android:textAppearance="@android:style/TextAppearance.Material.Body1"
                         android:gravity="end" />
 
                 </LinearLayout>

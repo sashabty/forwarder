@@ -28,6 +28,7 @@
                 android:layout_margin="8dp"
                 android:padding="16dp"
                 android:text="@string/waybillFillFormFragment_productAmount"
+                android:textAppearance="@android:style/TextAppearance.Material.Body2"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -44,6 +45,7 @@
                 android:inputType="number"
                 android:paddingStart="8dp"
                 android:paddingEnd="8dp"
+                android:textAppearance="@android:style/TextAppearance.Material.Widget.EditText"
                 app:layout_constraintBottom_toBottomOf="@id/fragmentWaybillFillForm_productAmountLabelTextView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/fragmentWaybillFillForm_productAmountLabelTextView"
@@ -101,6 +103,7 @@
                 android:layout_marginTop="8dp"
                 android:padding="16dp"
                 android:text="@string/waybillInfoFragment_amount"
+                android:textAppearance="@android:style/TextAppearance.Material.Body2"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/fragmentWaybillFillForm_signLayout" />
 
@@ -115,6 +118,7 @@
                 android:background="@drawable/shape_edit_text_default_bg"
                 android:gravity="center"
                 android:inputType="number"
+                android:textAppearance="@android:style/TextAppearance.Material.Widget.EditText"
                 app:layout_constraintBottom_toBottomOf="@id/fragmentWaybillFillForm_amountLabelTextView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/fragmentWaybillFillForm_amountLabelTextView"
@@ -141,6 +145,7 @@
                 android:layout_height="wrap_content"
                 android:padding="16dp"
                 android:text="@string/waybillFillFormFragment_amountDifferenceReason"
+                android:textAppearance="@android:style/TextAppearance.Material.Body2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/fragmentWaybillFillForm_differentAmountMessage" />
@@ -159,6 +164,7 @@
                 android:minLines="4"
                 android:padding="16dp"
                 android:scrollbars="vertical"
+                android:textAppearance="@android:style/TextAppearance.Material.Widget.EditText"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

@@ -44,6 +44,7 @@ class WaybillInfoFragment: Fragment() {
                 this.height = LinearLayout.LayoutParams.MATCH_PARENT
             }
             tv.setPadding(32.px, 16.px, 32.px, 16.px)
+            tv.setTextAppearance(it, android.R.style.TextAppearance_Material_Body1)
 
             fragmentWaybillInfo_notesLinearLayout.addView(tv)
 
@@ -55,6 +56,7 @@ class WaybillInfoFragment: Fragment() {
                 this.height = LinearLayout.LayoutParams.MATCH_PARENT
             }
             tv2.setPadding(32.px, 16.px, 32.px, 16.px)
+            tv2.setTextAppearance(it, android.R.style.TextAppearance_Material_Body1)
 
             fragmentWaybillInfo_notesLinearLayout.addView(tv2)
         }
