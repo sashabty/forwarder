@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import com.btys.forwarder.R
 import kotlinx.android.synthetic.main.fragment_waybill_fill_form.*
 
-class WaybillFillFormFragment : Fragment() {
+class WaybillFillFormFragment(private val onAddSignClickListener: () -> Unit) : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -19,8 +19,8 @@ class WaybillFillFormFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        fragmentWaybillFillForm_signClearButton.setOnClickListener {
-
+        fragmentWaybillFillForm_addSignatureButton.setOnClickListener {
+            onAddSignClickListener()
         }
     }
 }

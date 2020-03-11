@@ -57,6 +57,7 @@
                 android:layout_height="184dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/shape_image_bg"
+                app:layout_constraintBottom_toTopOf="@id/fragmentWaybillFillForm_addSignatureButton"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/fragmentWaybillFillForm_productAmountLabelTextView">
@@ -75,37 +76,27 @@
 
             </FrameLayout>
 
-            <FrameLayout
-                android:id="@+id/fragmentWaybillFillForm_signLayout"
-                android:layout_width="match_parent"
-                android:layout_height="152dp"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fragmentWaybillFillForm_addSignatureButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:background="@drawable/shape_sign_bg"
+                android:text="@string/waybillFillFormFragment_addSign"
+                app:layout_constraintBottom_toTopOf="@id/fragmentWaybillFillForm_amountLabelTextView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/fragmentWaybillFillForm_receiverPhotoFrameLayout" />
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/fragmentWaybillFillForm_signClearButton"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
-                android:background="@drawable/selector_image_button_bg"
-                app:layout_constraintBottom_toBottomOf="@id/fragmentWaybillFillForm_signLayout"
-                app:layout_constraintEnd_toEndOf="@id/fragmentWaybillFillForm_signLayout"
-                app:srcCompat="@drawable/ic_clear" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/fragmentWaybillFillForm_amountLabelTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:padding="16dp"
                 android:text="@string/waybillInfoFragment_amount"
                 android:textAppearance="@android:style/TextAppearance.Material.Body2"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/fragmentWaybillFillForm_signLayout" />
+                app:layout_constraintTop_toBottomOf="@id/fragmentWaybillFillForm_addSignatureButton"
+                app:layout_constraintBottom_toTopOf="@id/fragmentWaybillFillForm_differentAmountMessage"/>
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/fragmentWaybillFillForm_amountEditText"

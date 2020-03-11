@@ -38,8 +38,12 @@ class MainFragment : Fragment() {
                     fragmentMain_confirmButton.text = getString(R.string.mainFragment_deliver)
                     fragmentMain_waybillNumberTextView.isVisible = true
                 }
+                is SignatureFragment,
                 is WaybillInfoFragment -> {
-                    replaceFragment(WaybillFillFormFragment())
+                    replaceFragment(WaybillFillFormFragment {
+                        replaceFragment(SignatureFragment())
+                        fragmentMain_confirmButton.text = getString(R.string.mainFragment_done)
+                    })
                     fragmentMain_confirmButton.text = getString(R.string.mainFragment_submit)
                 }
                 is WaybillFillFormFragment -> {
@@ -64,6 +68,7 @@ class MainFragment : Fragment() {
 
     private fun fillWithSampleData() {
         fragmentMain_userNameTextView.text = "Иванов Сергей Петрович"
-        fragmentMain_waybillNumberTextView.text = getString(R.string.mainFragment_waybillNumber, 1222)
+        fragmentMain_waybillNumberTextView.text =
+            getString(R.string.mainFragment_waybillNumber, 1222)
     }
 }

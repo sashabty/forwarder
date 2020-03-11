@@ -14,6 +14,7 @@
     <string name="mainFragment_deliver">Товар передан</string>
     <string name="mainFragment_submit">Отправить</string>
     <string name="mainFragment_scanFinish">Сканировать QR для завершения</string>
+    <string name="mainFragment_done">Готово</string>
 
 <!--    empty waybill fragment-->
     <string name="emptyWaybillFragment_info">Путевой лист отсутствует.\nДля начала просканируйте QR</string>
@@ -36,6 +37,7 @@
     <string name="waybillFillFormFragment_amount">Сумма</string>
     <string name="waybillFillFormFragment_differentAmountMessage">Сумма отличается от суммы в накладной!\nУкажите причину</string>
     <string name="waybillFillFormFragment_amountDifferenceReason">Причина несовпадения</string>
+    <string name="waybillFillFormFragment_addSign">Добавить подпись</string>
     
 <!--    finish waybill fragment-->
     <string name="finishWaybillFragment_desc">Путевой лист № %d сохранен на сервере.</string>
