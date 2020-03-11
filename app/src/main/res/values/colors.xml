@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#03a9f4</color>
+    <color name="colorPrimaryLight">#67daff</color>
+    <color name="colorPrimaryDark">#007ac1</color>
+    <color name="colorAccent">#ffc107</color>
+    <color name="colorAccentLight">#fff350</color>
+    <color name="colorAccentDark">#c79100</color>
+
+<!--    base colors-->
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+<!--    global colors-->
+    <color name="app_background_color">#DFDDCE</color>
+
+<!--    status view-->
+    <color name="status_view_free_bg">#4CAF50</color>
+    <color name="status_view_free_text">#43A047</color>
+    <color name="status_view_busy_bg">#3F51B5</color>
+    <color name="status_view_busy_text">#3949AB</color>
+
+<!--    waybill info-->
+    <color name="divider_start_color">#999999</color>
+    <color name="divider_end_color">#00999999</color>
+</resources>

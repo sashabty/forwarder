@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Forwarder</string>
+
+<!--    login fragment-->
+    <string name="loginFragment_rememberMeTitle">Запомнить меня</string>
+    <string name="loginFragment_loginButtonTitle">Войти</string>
+
+<!--    main fragment-->
+    <string name="mainFragment_userName_placeHolder">Пользователь не определен</string>
+    <string name="mainFragment_scanStart">Сканировать QR для начала</string>
+    <string name="mainFragment_test">Отсканировано</string>
+    <string name="mainFragment_deliver">Товар передан</string>
+    <string name="mainFragment_submit">Отправить</string>
+    <string name="mainFragment_scanFinish">Сканировать QR для завершения</string>
+
+<!--    empty waybill fragment-->
+    <string name="emptyWaybillFragment_info">Путевой лист отсутствует.\nДля начала просканируйте QR</string>
+
+<!--    waybill info fragment-->
+    <string name="mainFragment_waybillNumber">Путевой лист № %d</string>
+    <string name="waybillInfoFragment_contractor">Контрагент</string>
+    <string name="waybillInfoFragment_address">Адрес</string>
+    <string name="waybillInfoFragment_document">Документ</string>
+    <string name="waybillInfoFragment_amount">Сумма</string>
+    <string name="waybillInfoFragment_capacity">Количество мест</string>
+    <string name="waybillInfoFragment_wrapper_color">Цвет упаковки</string>
+    <string name="waybillInfoFragment_notes">Примечания</string>
+    <string name="waybillInfoFragment_return">Возврат</string>
+    <string name="waybillInfoFragment_product">Товар</string>
+
+<!--    waybill fill form fragment-->
+    <string name="waybillFillFormFragment_productAmount">Количество отгруженного товара</string>
+    <string name="waybillFillFormFragment_addPhoto">Добавить фото</string>
+    <string name="waybillFillFormFragment_amount">Сумма</string>
+    <string name="waybillFillFormFragment_differentAmountMessage">Сумма отличается от суммы в накладной!\nУкажите причину</string>
+    <string name="waybillFillFormFragment_amountDifferenceReason">Причина несовпадения</string>
+    
+<!--    finish waybill fragment-->
+    <string name="finishWaybillFragment_desc">Путевой лист № %d сохранен на сервере.</string>
+    <string name="finishWaybillFragment_edit">Изменить путевой лист</string>
+
+<!--    status view-->
+    <string name="statusView_free">Свободен</string>
+    <string name="statusView_onWay">В пути</string>
+</resources>

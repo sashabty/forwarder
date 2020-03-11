@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    status view-->
+    <dimen name="status_view_stroke_width">2dp</dimen>
+    <dimen name="status_view_corners_radius">6dp</dimen>
+    <dimen name="status_view_margin_horizontal">16dp</dimen>
+    <dimen name="status_view_margin_vertical">8dp</dimen>
+</resources>
