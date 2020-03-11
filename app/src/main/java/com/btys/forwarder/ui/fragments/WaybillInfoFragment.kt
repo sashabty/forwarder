@@ -14,4 +14,8 @@ class WaybillInfoFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? = View.inflate(context, R.layout.fragment_waybill_info, null)
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+    }
 }

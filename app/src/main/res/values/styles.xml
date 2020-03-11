@@ -8,4 +8,20 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="loginFragmentBackground" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginStart">@dimen/fragment_horizontal_margin</item>
+        <item name="android:layout_marginEnd">@dimen/fragment_horizontal_margin</item>
+        <item name="android:layout_marginTop">@dimen/fragment_vertical_margin</item>
+        <item name="android:layout_marginBottom">@dimen/fragment_vertical_margin</item>
+        <item name="android:background">@drawable/shape_fragment_default_bg</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+    <style name="mainFragmentBackground" parent="loginFragmentBackground">
+        <item name="android:layout_marginBottom">@dimen/fragment_empty_waybill_vertical_margin</item>
+        <item name="android:layout_marginTop">@dimen/fragment_empty_waybill_vertical_margin</item>
+    </style>
+
 </resources>

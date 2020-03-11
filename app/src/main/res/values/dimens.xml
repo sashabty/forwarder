@@ -5,4 +5,25 @@
     <dimen name="status_view_corners_radius">6dp</dimen>
     <dimen name="status_view_margin_horizontal">16dp</dimen>
     <dimen name="status_view_margin_vertical">8dp</dimen>
+
+<!--    fragments-->
+    <dimen name="fragment_corner_radius">16dp</dimen>
+    <dimen name="fragment_horizontal_margin">16dp</dimen>
+    <dimen name="fragment_vertical_margin">64dp</dimen>
+
+    <dimen name="fragment_empty_waybill_vertical_margin">16dp</dimen>
+
+<!--    edit text-->
+    <dimen name="edit_text_radius">16dp</dimen>
+
+<!--    images-->
+    <dimen name="image_corners_radius">16dp</dimen>
+
+<!--    image buttons-->
+    <dimen name="image_button_corners_radius">4dp</dimen>
+
+<!--    username -->
+    <dimen name="shape_user_name_corners_radius">4dp</dimen>
+    <dimen name="user_name_min_text_size">13sp</dimen>
+    <dimen name="user_name_max_text_size">16dp</dimen>
 </resources>

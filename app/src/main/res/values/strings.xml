@@ -4,6 +4,8 @@
 <!--    login fragment-->
     <string name="loginFragment_rememberMeTitle">Запомнить меня</string>
     <string name="loginFragment_loginButtonTitle">Войти</string>
+    <string name="loginFragment_loginTitle">Логин</string>
+    <string name="loginFragment_passwordTitle">Пароль</string>
 
 <!--    main fragment-->
     <string name="mainFragment_userName_placeHolder">Пользователь не определен</string>
