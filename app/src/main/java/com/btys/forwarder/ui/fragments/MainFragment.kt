@@ -23,6 +23,8 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        fillWithSampleData()
+
         fragmentMain_statusView.updateStatus(StatusView.Status.FREE)
         fragmentMain_confirmButton.text = getString(R.string.mainFragment_test)
         fragmentMain_waybillNumberTextView.isGone = true
@@ -58,5 +60,10 @@ class MainFragment : Fragment() {
         childFragmentManager.commit {
             replace(R.id.fragmentMain_fragmentContainerView, fragment)
         }
+    }
+
+    private fun fillWithSampleData() {
+        fragmentMain_userNameTextView.text = "Иванов Сергей Петрович"
+        fragmentMain_waybillNumberTextView.text = getString(R.string.mainFragment_waybillNumber, 1222)
     }
 }

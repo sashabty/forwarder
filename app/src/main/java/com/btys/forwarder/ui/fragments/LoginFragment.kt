@@ -24,6 +24,8 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        fillWithSampleData()
+
         if (mainApplication().prefs.getBoolean(Prefs.REMEMBER_ME, false)) {
             fragmentLogin_loginEditText.setText(
                 mainApplication().prefs.getString(Prefs.LOGIN, "")
@@ -81,6 +83,14 @@ class LoginFragment : Fragment() {
 
         fragmentLogin_loginButton.setOnClickListener {
             mainActivity().replaceFragment(MainFragment())
+        }
+    }
+
+    private fun fillWithSampleData() {
+        if (mainApplication().prefs.getString(Prefs.LOGIN, "").equals("")
+            && mainApplication().prefs.getString(Prefs.PASSWORD, "").equals("")) {
+            fragmentLogin_loginEditText.setText("test")
+            fragmentLogin_loginEditText.setText("test")
         }
     }
 }
