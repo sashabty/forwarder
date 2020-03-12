@@ -8,8 +8,7 @@ import android.widget.LinearLayout
 import androidx.core.view.updateLayoutParams
 import androidx.fragment.app.Fragment
 import com.btys.forwarder.R
-import com.btys.forwarder.ui.app.ext.dp
-import com.btys.forwarder.ui.app.ext.px
+import com.btys.forwarder.ui.ext.px
 import com.google.android.material.textview.MaterialTextView
 import kotlinx.android.synthetic.main.fragment_waybill_info.*
 

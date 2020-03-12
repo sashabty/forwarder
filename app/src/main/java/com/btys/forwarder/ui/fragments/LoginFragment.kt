@@ -9,8 +9,8 @@ import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import com.btys.forwarder.R
 import com.btys.forwarder.ui.app.Prefs
-import com.btys.forwarder.ui.app.ext.mainActivity
-import com.btys.forwarder.ui.app.ext.mainApplication
+import com.btys.forwarder.ui.ext.mainActivity
+import com.btys.forwarder.ui.ext.mainApplication
 import kotlinx.android.synthetic.main.fragment_login.*
 
 class LoginFragment : Fragment() {

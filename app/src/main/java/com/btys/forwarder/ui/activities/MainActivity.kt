@@ -1,5 +1,6 @@
 package com.btys.forwarder.ui.activities
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -37,5 +38,9 @@ class MainActivity : AppCompatActivity() {
             setCustomAnimations(enterAnim, exitAnim, popEnterAnim, popExitAnim)
             replace(R.id.mainActivity_fragmentContainerView, fragment)
         }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
     }
 }

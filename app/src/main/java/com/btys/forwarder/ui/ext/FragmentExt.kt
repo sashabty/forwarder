@@ -1,4 +1,4 @@
-package com.btys.forwarder.ui.app.ext
+package com.btys.forwarder.ui.ext
 
 import androidx.fragment.app.Fragment
 import com.btys.forwarder.ui.activities.MainActivity
