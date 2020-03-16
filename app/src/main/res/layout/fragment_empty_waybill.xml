@@ -1,32 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout style="@style/mainFragmentBackground">
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/fragmentEmptyWaybill_emptyImageView"
+        android:layout_width="256dp"
+        android:layout_height="256dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_empty_list"
+        app:tint="@color/light_gray" />
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/fragmentEmptyWaybill_infoTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/emptyWaybillFragment_info"
-            android:textAppearance="@android:style/TextAppearance.Material.Body1"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/fragmentEmptyWaybill_emptyDescTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/emptyWaybillFragment_info"
+        android:textColor="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragmentEmptyWaybill_emptyImageView" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/fragmentEmptyWaybill_scanQRButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/mainFragment_scanStart"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fragmentEmptyWaybill_infoTextView" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</FrameLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fragmentEmptyWaybill_scanQRButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mainFragment_scanStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragmentEmptyWaybill_emptyDescTextView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -82,7 +82,7 @@ class LoginFragment : Fragment() {
         }
 
         fragmentLogin_loginButton.setOnClickListener {
-            mainActivity().replaceFragment(MainFragment())
+            mainActivity().onUserLogin()
         }
     }
 

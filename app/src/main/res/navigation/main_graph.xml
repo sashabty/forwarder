@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_graph"
+    app:startDestination="@id/mainGraph_emptyWaybillFragment">
+
+    <fragment
+        android:id="@+id/mainGraph_emptyWaybillFragment"
+        android:name="com.btys.forwarder.ui.fragments.EmptyWaybillFragment"
+        android:label="EmptyWaybillFragment" >
+        <action
+            android:id="@+id/action_mainGraph_emptyWaybillFragment_to_mainGraph_waybillInfoFragment"
+            app:destination="@id/mainGraph_waybillInfoFragment"
+            app:enterAnim="@anim/fragment_slide_in_right"
+            app:exitAnim="@anim/fragment_slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainGraph_waybillInfoFragment"
+        android:name="com.btys.forwarder.ui.fragments.WaybillInfoFragment"
+        android:label="WaybillInfoFragment" >
+        <action
+            android:id="@+id/action_mainGraph_waybillInfoFragment_to_mainGraph_waybillFillFormFragment"
+            app:destination="@id/mainGraph_waybillFillFormFragment"
+            app:enterAnim="@anim/fragment_slide_in_right"
+            app:exitAnim="@anim/fragment_slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainGraph_waybillFillFormFragment"
+        android:name="com.btys.forwarder.ui.fragments.WaybillFillFormFragment"
+        android:label="WaybillFillFormFragment" >
+        <action
+            android:id="@+id/action_mainGraph_waybillFillFormFragment_to_mainGraph_signatureFragment"
+            app:destination="@id/mainGraph_signatureFragment"
+            app:enterAnim="@anim/fragment_slide_in_right"
+            app:exitAnim="@anim/fragment_slide_out_left" />
+        <action
+            android:id="@+id/action_mainGraph_waybillFillFormFragment_to_mainGraph_finishWaybillFragment"
+            app:destination="@id/mainGraph_finishWaybillFragment"
+            app:enterAnim="@anim/fragment_slide_in_right"
+            app:exitAnim="@anim/fragment_slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainGraph_signatureFragment"
+        android:name="com.btys.forwarder.ui.fragments.SignatureFragment"
+        android:label="SignatureFragment" />
+    <fragment
+        android:id="@+id/mainGraph_finishWaybillFragment"
+        android:name="com.btys.forwarder.ui.fragments.FinishWaybillFragment"
+        android:label="FinishWaybillFragment" >
+        <action
+            android:id="@+id/action_mainGraph_finishWaybillFragment_to_mainGraph_emptyWaybillFragment"
+            app:destination="@id/mainGraph_emptyWaybillFragment"
+            app:enterAnim="@anim/fragment_slide_in_right"
+            app:exitAnim="@anim/fragment_slide_out_left" />
+        <action
+            android:id="@+id/action_mainGraph_finishWaybillFragment_to_mainGraph_waybillFillFormFragment"
+            app:destination="@id/mainGraph_waybillFillFormFragment" />
+    </fragment>
+</navigation>

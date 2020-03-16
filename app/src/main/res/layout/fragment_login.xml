@@ -1,97 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/transparent">
+    android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout style="@style/loginFragmentBackground">
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/fragmentLogin_logo"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:src="@drawable/stub_logo"
+        app:layout_constraintBottom_toTopOf="@id/fragmentLogin_loginInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/fragmentLogin_logo"
-            android:layout_width="128dp"
-            android:layout_height="128dp"
-            android:src="@drawable/stub_logo"
-            app:layout_constraintBottom_toTopOf="@id/fragmentLogin_loginInputLayout"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="packed" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fragmentLogin_loginInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="64dp"
+        app:boxBackgroundColor="@color/white"
+        app:boxBackgroundMode="outline"
+        app:layout_constraintBottom_toTopOf="@id/fragmentLogin_passwordInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragmentLogin_logo">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/fragmentLogin_loginInputLayout"
-            android:layout_width="0dp"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fragmentLogin_loginEditText"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="64dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="64dp"
-            app:boxBackgroundColor="@color/white"
-            app:boxBackgroundMode="outline"
-            app:layout_constraintBottom_toTopOf="@id/fragmentLogin_passwordInputLayout"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fragmentLogin_logo">
+            android:hint="@string/loginFragment_loginTitle" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/fragmentLogin_loginEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/loginFragment_loginTitle" />
-        </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fragmentLogin_passwordInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="64dp"
+        app:boxBackgroundColor="@color/white"
+        app:boxBackgroundMode="outline"
+        app:layout_constraintBottom_toTopOf="@id/fragmentLogin_rememberMeTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragmentLogin_loginInputLayout">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/fragmentLogin_passwordInputLayout"
-            android:layout_width="0dp"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fragmentLogin_passwordEditText"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="64dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="64dp"
-            app:boxBackgroundColor="@color/white"
-            app:boxBackgroundMode="outline"
-            app:layout_constraintBottom_toTopOf="@id/fragmentLogin_rememberMeTextView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fragmentLogin_loginInputLayout">
+            android:hint="@string/loginFragment_passwordTitle"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/fragmentLogin_passwordEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/loginFragment_passwordTitle"
-                android:inputType="textPassword" />
-        </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/fragmentLogin_rememberMeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/loginFragment_rememberMeTitle"
+        app:layout_constraintBottom_toTopOf="@id/fragmentLogin_loginButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/fragmentLogin_rememberMeCheckBox"
+        app:layout_constraintTop_toBottomOf="@id/fragmentLogin_passwordInputLayout" />
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/fragmentLogin_rememberMeTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="@string/loginFragment_rememberMeTitle"
-            app:layout_constraintBottom_toTopOf="@id/fragmentLogin_loginButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/fragmentLogin_rememberMeCheckBox"
-            app:layout_constraintTop_toBottomOf="@id/fragmentLogin_passwordInputLayout" />
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/fragmentLogin_rememberMeCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/fragmentLogin_rememberMeTextView"
+        app:layout_constraintEnd_toStartOf="@id/fragmentLogin_rememberMeTextView"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/fragmentLogin_rememberMeTextView" />
 
-        <com.google.android.material.checkbox.MaterialCheckBox
-            android:id="@+id/fragmentLogin_rememberMeCheckBox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="@id/fragmentLogin_rememberMeTextView"
-            app:layout_constraintEnd_toStartOf="@id/fragmentLogin_rememberMeTextView"
-            app:layout_constraintHorizontal_chainStyle="packed"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/fragmentLogin_rememberMeTextView" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fragmentLogin_loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="@string/loginFragment_loginButtonTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragmentLogin_rememberMeTextView" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/fragmentLogin_loginButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="64dp"
-            android:text="@string/loginFragment_loginButtonTitle"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fragmentLogin_rememberMeTextView" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

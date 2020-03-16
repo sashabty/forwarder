@@ -6,160 +6,148 @@
     android:scrollbarThumbVertical="@drawable/shape_scroll_view_thumb"
     android:scrollbarTrackVertical="@drawable/shape_scroll_view_track">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/fragmentWaybillFillForm_productAmountLabelTextView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_margin="8dp"
+            android:padding="16dp"
+            android:text="@string/waybillFillFormFragment_productAmount"
+            android:textAppearance="@android:style/TextAppearance.Material.Body2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fragmentWaybillFillForm_productAmountEditText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/shape_edit_text_default_bg"
+            android:gravity="center"
+            android:inputType="number"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:textAppearance="@android:style/TextAppearance.Material.Widget.EditText"
+            app:layout_constraintBottom_toBottomOf="@id/fragmentWaybillFillForm_productAmountLabelTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/fragmentWaybillFillForm_productAmountLabelTextView"
+            app:layout_constraintTop_toTopOf="@id/fragmentWaybillFillForm_productAmountLabelTextView" />
+
+        <FrameLayout
+            android:id="@+id/fragmentWaybillFillForm_receiverPhotoFrameLayout"
+            android:layout_width="184dp"
+            android:layout_height="184dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_image_bg"
+            app:layout_constraintBottom_toTopOf="@id/fragmentWaybillFillForm_addSignatureButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragmentWaybillFillForm_productAmountLabelTextView">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/fragmentWaybillFillForm_receiverPhotoImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/fragmentWaybillFillForm_receiverPhotoEmptyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/waybillFillFormFragment_addPhoto" />
+
+        </FrameLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fragmentWaybillFillForm_addSignatureButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/waybillFillFormFragment_addSign"
+            app:layout_constraintBottom_toTopOf="@id/fragmentWaybillFillForm_amountLabelTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragmentWaybillFillForm_receiverPhotoFrameLayout" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/fragmentWaybillFillForm_amountLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@string/waybillInfoFragment_amount"
+            android:textAppearance="@android:style/TextAppearance.Material.Body2"
+            app:layout_constraintBottom_toTopOf="@id/fragmentWaybillFillForm_differentAmountMessage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragmentWaybillFillForm_addSignatureButton" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fragmentWaybillFillForm_amountEditText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/shape_edit_text_default_bg"
+            android:gravity="center"
+            android:inputType="number"
+            android:textAppearance="@android:style/TextAppearance.Material.Widget.EditText"
+            app:layout_constraintBottom_toBottomOf="@id/fragmentWaybillFillForm_amountLabelTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/fragmentWaybillFillForm_amountLabelTextView"
+            app:layout_constraintTop_toTopOf="@id/fragmentWaybillFillForm_amountLabelTextView" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/fragmentWaybillFillForm_differentAmountMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/shape_fragment_default_bg"
-            android:elevation="4dp">
+            android:paddingStart="32dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="32dp"
+            android:paddingBottom="8dp"
+            android:text="@string/waybillFillFormFragment_differentAmountMessage"
+            android:textColor="@color/text_error"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragmentWaybillFillForm_amountLabelTextView" />
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/fragmentWaybillFillForm_productAmountLabelTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:padding="16dp"
-                android:text="@string/waybillFillFormFragment_productAmount"
-                android:textAppearance="@android:style/TextAppearance.Material.Body2"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/fragmentWaybillFillForm_differenceReasonLabelTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@string/waybillFillFormFragment_amountDifferenceReason"
+            android:textAppearance="@android:style/TextAppearance.Material.Body2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragmentWaybillFillForm_differentAmountMessage" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/fragmentWaybillFillForm_productAmountEditText"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="4dp"
-                android:background="@drawable/shape_edit_text_default_bg"
-                android:gravity="center"
-                android:inputType="number"
-                android:paddingStart="8dp"
-                android:paddingEnd="8dp"
-                android:textAppearance="@android:style/TextAppearance.Material.Widget.EditText"
-                app:layout_constraintBottom_toBottomOf="@id/fragmentWaybillFillForm_productAmountLabelTextView"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/fragmentWaybillFillForm_productAmountLabelTextView"
-                app:layout_constraintTop_toTopOf="@id/fragmentWaybillFillForm_productAmountLabelTextView" />
-
-            <FrameLayout
-                android:id="@+id/fragmentWaybillFillForm_receiverPhotoFrameLayout"
-                android:layout_width="184dp"
-                android:layout_height="184dp"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/shape_image_bg"
-                app:layout_constraintBottom_toTopOf="@id/fragmentWaybillFillForm_addSignatureButton"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/fragmentWaybillFillForm_productAmountLabelTextView">
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/fragmentWaybillFillForm_receiverPhotoImageView"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/fragmentWaybillFillForm_receiverPhotoEmptyTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/waybillFillFormFragment_addPhoto" />
-
-            </FrameLayout>
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/fragmentWaybillFillForm_addSignatureButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:text="@string/waybillFillFormFragment_addSign"
-                app:layout_constraintBottom_toTopOf="@id/fragmentWaybillFillForm_amountLabelTextView"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/fragmentWaybillFillForm_receiverPhotoFrameLayout" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/fragmentWaybillFillForm_amountLabelTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="16dp"
-                android:text="@string/waybillInfoFragment_amount"
-                android:textAppearance="@android:style/TextAppearance.Material.Body2"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/fragmentWaybillFillForm_addSignatureButton"
-                app:layout_constraintBottom_toTopOf="@id/fragmentWaybillFillForm_differentAmountMessage"/>
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/fragmentWaybillFillForm_amountEditText"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="4dp"
-                android:background="@drawable/shape_edit_text_default_bg"
-                android:gravity="center"
-                android:inputType="number"
-                android:textAppearance="@android:style/TextAppearance.Material.Widget.EditText"
-                app:layout_constraintBottom_toBottomOf="@id/fragmentWaybillFillForm_amountLabelTextView"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/fragmentWaybillFillForm_amountLabelTextView"
-                app:layout_constraintTop_toTopOf="@id/fragmentWaybillFillForm_amountLabelTextView" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/fragmentWaybillFillForm_differentAmountMessage"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:paddingStart="32dp"
-                android:paddingTop="8dp"
-                android:paddingEnd="32dp"
-                android:paddingBottom="8dp"
-                android:text="@string/waybillFillFormFragment_differentAmountMessage"
-                android:textColor="@color/text_error"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/fragmentWaybillFillForm_amountLabelTextView" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/fragmentWaybillFillForm_differenceReasonLabelTextView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:padding="16dp"
-                android:text="@string/waybillFillFormFragment_amountDifferenceReason"
-                android:textAppearance="@android:style/TextAppearance.Material.Body2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/fragmentWaybillFillForm_differentAmountMessage" />
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/fragmentWaybillFillForm_differenceReasonEditText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/shape_edit_text_default_bg"
-                android:gravity="start|top"
-                android:lines="4"
-                android:minLines="4"
-                android:padding="16dp"
-                android:scrollbars="vertical"
-                android:textAppearance="@android:style/TextAppearance.Material.Widget.EditText"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/fragmentWaybillFillForm_differenceReasonLabelTextView" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </LinearLayout>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fragmentWaybillFillForm_differenceReasonEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/shape_edit_text_default_bg"
+            android:gravity="start|top"
+            android:lines="4"
+            android:minLines="4"
+            android:padding="16dp"
+            android:scrollbars="vertical"
+            android:textAppearance="@android:style/TextAppearance.Material.Widget.EditText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragmentWaybillFillForm_differenceReasonLabelTextView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -7,10 +7,13 @@
     android:background="@color/app_bg"
     tools:context=".ui.activities.MainActivity">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/mainActivity_fragmentContainerView"
+    <fragment
+        android:id="@+id/mainActivity_navHostFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/login_graph"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -16,7 +16,7 @@
     <color name="dark_gray">#555555</color>
 
 <!--    global colors-->
-    <color name="app_bg">#F1FCFF</color>
+    <color name="app_bg">@color/white</color>
     <color name="fragment_bg">@color/white</color>
 
     <color name="text_error">#B00020</color>

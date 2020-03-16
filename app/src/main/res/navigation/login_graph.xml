@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_graph"
+    app:startDestination="@id/loginGraph_loginFragment">
+
+    <fragment
+        android:id="@+id/loginGraph_loginFragment"
+        android:name="com.btys.forwarder.ui.fragments.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginGraph_loginFragment_to_loginGraph_mainFragment"
+            app:destination="@id/loginGraph_mainFragment"
+            app:enterAnim="@anim/fragment_slide_in_right"
+            app:exitAnim="@anim/fragment_slide_out_left" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_loginGraph_loginFragment"
+        app:destination="@id/loginGraph_loginFragment"
+        app:enterAnim="@anim/fragment_fly_in_from_bottom" />
+    <fragment
+        android:id="@+id/loginGraph_mainFragment"
+        android:name="com.btys.forwarder.ui.fragments.MainFragment"
+        android:label="MainFragment" />
+</navigation>

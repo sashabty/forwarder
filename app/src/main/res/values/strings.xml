@@ -17,10 +17,11 @@
     <string name="mainFragment_done">Готово</string>
 
 <!--    empty waybill fragment-->
-    <string name="emptyWaybillFragment_info">Путевой лист отсутствует.\nДля начала просканируйте QR</string>
+    <string name="emptyWaybillFragment_info">Для начала просканируйте QR</string>
 
 <!--    waybill info fragment-->
     <string name="mainFragment_waybillNumber">Путевой лист № %d</string>
+    <string name="mainFragment_waybillNumberEmpty">Путевой лист отсутствует</string>
     <string name="waybillInfoFragment_contractor">Контрагент</string>
     <string name="waybillInfoFragment_address">Адрес</string>
     <string name="waybillInfoFragment_document">Документ</string>
